@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sbsTube</title>
+    <title>iTube | Assista vídeos online</title>
     <link rel="stylesheet" href="hamburguer.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,41 +11,48 @@
     <div>
     <header>
         <div class="container">
-            <div id="brand-menu">
-                <nav>
-                    <button class="hamburger hamburger--vortex" type="button">
-                        <span class="hamburger-box">
-                          <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-                      <ul id="menu" class="hidden">
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Música </a></li>
-                        <li><a href="#">Entretenimento </a></li>
-                        <li><a href="#">Esportes</a></li>
-                      </ul>
-                    
-                </nav>
-                <input type="button" value="" id="search-btn-mobile">
-                <a href="" id="logo">
-                <h1><img src="img/logo.png" alt=""></h1>
-                </a>
+            <div id="login">
+                <div>
+                    <a href="javascript:void(0)" id="user"> 
+                        <span ></span> <p id="username">silas.sbs</p>
+                        <ul id="options">
+                            <li><a href="#">Meu Canal</a></li>
+                            <li><a href="#">Minhas Configurações</a></li>
+                            <li><a href="#" id="logout-link">Sair</a></li>
+                        </ul>
+                    </a>
+                </div>
             </div>
             <div id="form">
                 <form action="#">
                     <input type="search" name="search" id="search" placeholder="Buscar....">
                     <input type="submit" value="" id="search-btn">
                 </form>
-            </div>  
-            <div id="login">
-                <a href="javascript:void(0)" id="user"> <span ></span> <p id="username">silas.sbs</p></a>
-                    <ul id="options">
-                        <li><a href="#">Meu Canal</a></li>
-                        <li><a href="#">Minhas Configurações</a></li>
-                        <li><a href="#" id="logout-link">Sair</a></li>
-                    </ul>
+            </div> 
+            
+           
+            <div id="brand-menu">
+                <input type="button" value="" id="search-btn-mobile">
+                <a href="" id="logo">
+                    <h1><img src="img/logo.png" alt=""></h1>
+                    </a>
                 
             </div>
+            <nav>
+                <button class="hamburger hamburger--vortex" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                  <ul id="menu" class="hidden">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Música </a></li>
+                    <li><a href="#">Entretenimento </a></li>
+                    <li><a href="#">Esportes</a></li>
+                  </ul>
+                
+            </nav>
+
         </div>
     </header>
     <section id="first-section">

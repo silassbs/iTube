@@ -2,15 +2,16 @@
 .container{width: 90%;height:100%;display: flex;justify-content: space-between;margin: 0 auto;align-items: center;}
 body{
     position: relative;
+    touch-action: auto;
 }
 #first-section{padding: 70px 0 40px 0;}
-#brand-menu{display: flex;align-items: center;/* width: 25%; */justify-content: start;}
+#brand-menu{display: flex;align-items: center;justify-content: center;}
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after,.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     background-color: #fff;
     width: 32px;
     height: 2px;
 }
-.hidden{left: -1000px; transition: all .3s;}
+.hidden{left: -1000px;transition: all .3s;}
 .is-active{left: 0;}
 #search-btn-mobile{display: none;}
 header{background-color: #373435;color: #A9ABAE;padding: 5px 0;/* overflow: hidden; *//* z-index: 2; */position: fixed;width: 100%;}
@@ -21,7 +22,8 @@ header #logo{
 }
 header #logo img{width: 100%;}
 header ul{position: absolute;background-color: #373435;width: 200px;display: flex;flex-direction: column;left: 0;height: 100vw;}
-header ul li{}
+header ul li{
+}
 header ul li a{color: #fff;padding: 20px 0;display: flex;justify-content: center;}
 header div#form{
     /* width: 50%; */
@@ -49,6 +51,7 @@ header form input#search{width: 100%;padding-left: 7px;border: none;height: 38px
 }
 #search-btn-mobile{}
 header div{display: flex;justify-content: flex-end;width: 33%;}
+header div#login{display: flex;position: relative;justify-content: center;margin-right: 10px;/* width: 33%; */}
 #login{position: relative;/* z-index: 2; */}
 #login #user{display: flex;align-items: center;}
 #login a#user span{display:flex;background-image: url("img/user.png");height: 35px;width: 35px;background-size: 35px;position: relative;/* z-index: 1; */margin: 10px;}
@@ -59,12 +62,12 @@ header div{display: flex;justify-content: flex-end;width: 33%;}
     height: auto;
     /* bottom: -200px; */
     top: -250px;
-    left: 64%;
+    /* left: 5px; */
     border-radius: 6px;
     transition: all .3s;
 }
-#options li:hover{background-color: #454343;}
-#options.appear{top: 44px;z-index: -1;}
+#options li a:hover, #login #user:hover{background-color: #454343;}
+#options.appear{top: 21px;z-index: -1;right: 0;width: 100%;}
 
 section .container{
     flex-direction: column;
@@ -109,7 +112,7 @@ footer .container h6{}
 }
 .overlay{background-color: #000;opacity: .9;display: block!important;transition: all .3s;}
 .overflow{overflow: hidden;}
-.block{opacity: 1;display: flex;}
+.block{opacity: 1;display: flex;height: 100vh;}
 #logout #close{
     background-color: green;
     border: none;
@@ -139,30 +142,31 @@ footer .container h6{}
     background-color: #fff;
     color:red;
 }
+@media(max-width: 950px){
+    #search-btn-mobile{display: flex;border-radius: 100%;width: 20px;background-color: transparent;border: 1px solid #cccccc4a;width: 38px;height: 38px;padding: 20px;}
+    header form{opacity: 0;position: absolute;top: 68px;height: 100vw;display: none;left: 0;/* width: 100%; */transition: all .5s;background: #00000085;}
+}
 
 @media (max-width: 700px){
     header .container{width: 100%;}
-    header form{opacity: 0;position: absolute;top: 68px;height: 100vw;display: none;left: 0;/* width: 100%; */transition: all .5s;background: #00000085;}
-    #search-btn-mobile{display: flex;border-radius: 100%;width: 20px;background-color: transparent;border: 1px solid #cccccc4a;width: 38px;height: 38px;padding: 20px;}
+   
+  
     header div{
-    width: 144%;
+    width: 100%;
     display: flex;
+    justify-content: center;
 }
 header h1{
-    width: 105px;
+    width: 80px;
     align-items: center;
     display: flex;
     margin-left: 25px;
 }
 #login #user{
-    margin-right: 6px;
+    /* margin-right: 6px; */
     }
 
-    #options{
-
-left: -61%;
-
-    }
+    #options{}
     #logout h1{
     margin-top: 11vh;
 }
@@ -182,6 +186,9 @@ left: -61%;
     text-align: left;
     margin: 14px;
     }
+    header ul li a{font-size: 12px;text-align: center;}
+    header div#login, header div#login{position: static;}
+
 }
 
 @media (max-width: 500px){
