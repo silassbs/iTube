@@ -1,0 +1,201 @@
+*{padding: 0; margin: 0;outline: none;text-decoration: none;font-family: Arial, Helvetica, sans-serif;list-style: none;}
+.container{width: 90%;height:100%;display: flex;justify-content: space-between;margin: 0 auto;align-items: center;}
+body{
+    position: relative;
+}
+#first-section{padding: 70px 0 40px 0;}
+#brand-menu{display: flex;align-items: center;/* width: 25%; */justify-content: start;}
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after,.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: #fff;
+    width: 32px;
+    height: 2px;
+}
+.hidden{left: -1000px; transition: all .3s;}
+.is-active{left: 0;}
+#search-btn-mobile{display: none;}
+header{background-color: #373435;color: #A9ABAE;padding: 5px 0;/* overflow: hidden; *//* z-index: 2; */position: fixed;width: 100%;}
+header h1{margin-left: 10%;font-size: 24px;width: 150px;}
+header nav{}
+header #logo{
+    color: #fff;
+}
+header #logo img{width: 100%;}
+header ul{position: absolute;background-color: #373435;width: 200px;display: flex;flex-direction: column;left: 0;height: 100vw;}
+header ul li{}
+header ul li a{color: #fff;padding: 20px 0;display: flex;justify-content: center;}
+header div#form{
+    /* width: 50%; */
+}
+header form{
+    display: flex;
+    width: 100%;
+}
+header form input{
+    padding: 5px 0;
+    border-radius: 3px;
+}
+header form input#search{width: 100%;padding-left: 7px;border: none;height: 38px;}
+
+#search-btn, #search-btn-mobile{
+    background-image: url('img/search.png');
+    height: 38px;
+    width: 35px;
+    background-size: 18px;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 25px;
+    border: none;
+}
+#search-btn-mobile{}
+header div{display: flex;justify-content: flex-end;width: 33%;}
+#login{position: relative;/* z-index: 2; */}
+#login #user{display: flex;align-items: center;}
+#login a#user span{display:flex;background-image: url("img/user.png");height: 35px;width: 35px;background-size: 35px;position: relative;/* z-index: 1; */margin: 10px;}
+
+#login p#username{color: #fff;}
+
+#options{
+    height: auto;
+    /* bottom: -200px; */
+    top: -250px;
+    left: 64%;
+    border-radius: 6px;
+    transition: all .3s;
+}
+#options li:hover{background-color: #454343;}
+#options.appear{top: 44px;z-index: -1;}
+
+section .container{
+    flex-direction: column;
+    /* z-index: -5; */
+}
+section h2{margin: 20px 0 0 0;}
+
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.box{
+    height: 170px;
+    background: #ccc;
+    display: flex;
+    margin-top: 20px;
+}
+.video-title{text-align: center;width: 300px;/* z-index: -2; */}
+.video-title h3{
+    margin-top: 20px;
+    color: #1b1b1b;
+}
+.video-title p{flex-wrap: nowrap;display: flex;color: #727272;margin-top: 10px;}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 22px;
+}
+footer .container{
+    flex-direction: column;
+}
+footer .container h6{}
+
+#logout {display: none;background: #000;color: #fff;position: absolute;width: 100vw;height: 100vh;top: 0;border-radius: 0;text-align: center;opacity: 1;/* transition: all .3s; */}
+#logout h1{
+    margin-top: 33vh;
+}
+.overlay{background-color: #000;opacity: .9;display: block!important;transition: all .3s;}
+.overflow{overflow: hidden;}
+.block{opacity: 1;display: flex;}
+#logout #close{
+    background-color: green;
+    border: none;
+    padding: 13px 36px;
+    color: #fff;
+    border-radius: 7px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all .3s;
+    border: solid 2px green;
+
+}
+#logout #close:hover{
+    background-color: #fff;
+    color:green;
+}
+#logout #exit{
+    background-color: red;
+    border: 2px solid red;
+    padding: 13px 36px;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .3s;
+}
+#logout #exit:hover{
+    background-color: #fff;
+    color:red;
+}
+
+@media (max-width: 700px){
+    header .container{width: 100%;}
+    header form{opacity: 0;position: absolute;top: 68px;height: 100vw;display: none;left: 0;/* width: 100%; */transition: all .5s;background: #00000085;}
+    #search-btn-mobile{display: flex;border-radius: 100%;width: 20px;background-color: transparent;border: 1px solid #cccccc4a;width: 38px;height: 38px;padding: 20px;}
+    header div{
+    width: 144%;
+    display: flex;
+}
+header h1{
+    width: 105px;
+    align-items: center;
+    display: flex;
+    margin-left: 25px;
+}
+#login #user{
+    margin-right: 6px;
+    }
+
+    #options{
+
+left: -61%;
+
+    }
+    #logout h1{
+    margin-top: 11vh;
+}
+    #logout #close{}
+    #logout #exit{}
+
+}
+
+
+@media (max-width: 665px){
+    .box{width: 300px;height: 130px;}
+    .video-title{
+    display: flex;
+    width: 100%;
+    }
+    .text{
+    text-align: left;
+    margin: 14px;
+    }
+}
+
+@media (max-width: 500px){
+    .box{width: 471px;height: 109px;}
+    .video-title{
+    display: flex;
+    width: 100%;
+    }
+    .text{
+    text-align: left;
+    margin: 0 20px;
+    }
+}
+
+@media (max-width: 350px){
+    #username{display: none;}
+}
