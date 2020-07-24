@@ -1,3 +1,4 @@
+
 *{padding: 0; margin: 0;outline: none;text-decoration: none;font-family: Arial, Helvetica, sans-serif;list-style: none;}
 .container{width: 90%;height:100%;display: flex;justify-content: space-between;margin: 0 auto;align-items: center;}
 button, a, input[type=submit]{cursor: pointer;}
@@ -5,7 +6,7 @@ body{
     position: relative;
 }
 #first-section{padding: 70px 0 40px 0;}
-#brand-menu{display: flex;align-items: center;justify-content: center;}
+#brand-menu{display: flex;justify-content: left;}
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after,.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     background-color: #fff;
     width: 32px;
@@ -14,14 +15,14 @@ body{
 .hidden{left: -1000px;transition: all .3s;}
 .is-active{left: 0;}
 #search-btn-mobile{display: none;}
-header{background-color: #373435;color: #A9ABAE;padding: 5px 0;/* overflow: hidden; *//* z-index: 2; */position: fixed;width: 100%;}
+header{background-color: #000;color: #A9ABAE;padding: 5px 0;/* overflow: hidden; */z-index: 2;position: fixed;width: 100%;}
 header h1{margin-left: 10%;font-size: 24px;width: 150px;}
 header nav{}
 header #logo{
     color: #fff;
 }
-header #logo img{width: 100%;}
-header ul{position: absolute;background-color: #373435;width: 200px;display: flex;flex-direction: column;left: 0;height: 100vw;}
+header #logo img{width: 70%;}
+header ul{position: absolute;background-color: #000;width: 200px;display: flex;flex-direction: column;left: 0;height: 100vw;}
 header ul li{
 }
 header ul li a{color: #fff;padding: 20px 0;display: flex;justify-content: center;}
@@ -53,7 +54,7 @@ header form input#search{width: 100%;padding-left: 7px;border: none;height: 38px
 header div{display: flex;justify-content: flex-end;width: 33%;}
 header div#login{display: flex;position: relative;justify-content: center;margin-right: 10px;/* width: 33%; */}
 #login{position: relative;/* z-index: 2; */}
-#login #user{display: flex;align-items: center;}
+#login #user{display: flex;align-items: center;width: 100%;}
 #login a#user span{display:flex;background-image: url("img/user.png");height: 35px;width: 35px;background-size: 35px;position: relative;/* z-index: 1; */margin: 10px;}
 
 #login p#username{color: #fff;}
@@ -86,9 +87,16 @@ section h2{margin: 20px 0 0 0;}
     height: 170px;
     background: #ccc;
     display: flex;
+    border-radius: 5px;
     margin-top: 20px;
+    background: url('https://i.picsum.photos/id/222/300/170.jpg?hmac=FsbvL4JDTfWijvMVqhfvKV5t9Bj6oP9-4hcfsSJnlCY') center bottom;
+    opacity: .9;
+    transition: all .3s;
 }
-.video-title{text-align: center;width: 300px;/* z-index: -2; */}
+.box:hover{
+    opacity: 1;
+}
+.video-title{text-align: center;width: 290px;/* z-index: -2; */}
 .video-title h3{
     margin-top: 20px;
     color: #1b1b1b;
@@ -145,6 +153,10 @@ footer .container h6{}
 @media(max-width: 950px){
     #search-btn-mobile{display: flex;border-radius: 100%;width: 20px;background-color: transparent;border: 1px solid #cccccc4a;width: 38px;height: 38px;padding: 20px;}
     header form{opacity: 0;position: absolute;top: 68px;height: 100vw;display: none;left: 0;/* width: 100%; */transition: all .5s;background: #00000085;}
+    header #logo {
+        align-items: center;
+        display: flex;
+    }
 }
 
 @media (max-width: 700px){
@@ -175,6 +187,12 @@ header h1{
 
 }
 
+#video-details .box{
+    width: 100%;
+    height: 50vw;
+    border-radius: 5px;
+}
+
 
 @media (max-width: 665px){
     .box{width: 300px;height: 130px;}
@@ -188,6 +206,7 @@ header h1{
     }
     header ul li a{font-size: 12px;text-align: center;}
     header div#login, header div#login{position: static;}
+    
 
 }
 
@@ -205,4 +224,5 @@ header h1{
 
 @media (max-width: 350px){
     #username{display: none;}
+  
 }

@@ -19,9 +19,10 @@
                 </button>
                   <ul id="menu" class="hidden">
                     <li><a href="#">Início</a></li>
-                    <li><a href="#">Música </a></li>
-                    <li><a href="#">Entretenimento </a></li>
-                    <li><a href="#">Esportes</a></li>
+                    <li><a href="javascripit:void(0)" onclick="scroolSmooth('#trending')">Em Alta</a></li>
+                    <li><a href="#recomended">Recomendados</a></li>
+                    <li><a href="#entertainment">Entretenimento </a></li>
+                    <li><a href="#sports">Esportes</a></li>
                   </ul>
                 
             </nav>
@@ -60,7 +61,7 @@
     <section id="first-section">
         <div class="container">
             <h2>Em Alta 🔥</h2>
-            <div class="wrap">
+            <div class="wrap" id="trending">
                 <a href="" class="video-title"><div class="box"></div>
                     
                     <div class="text">
@@ -134,8 +135,8 @@
                 
             </div>
 
-            <h2>Recomendados 👀</h2>
-            <div class="wrap">
+            <h2 id="recommended">Recomendados 👀</h2>
+            <div class="wrap" >
                 <a href="" class="video-title"><div class="box"></div>
                     
                     <div class="text">
@@ -202,8 +203,8 @@
                 </a>
             </div>
 
-            <h2>Entretenimento 🎭</h2>
-            <div class="wrap">
+            <h2 id="entertainment">Entretenimento 🎭</h2>
+            <div class="wrap" >
                 <a href="" class="video-title"><div class="box"></div>
                     
                     <div class="text">
@@ -269,8 +270,8 @@
                     </div>
                 </a>
             </div>
-            <h2>Esportes ⚽</h2>
-            <div class="wrap">
+            <h2 id="sports">Esportes ⚽</h2>
+            <div class="wrap" >
                
                 <a href="" class="video-title"><div class="box"></div>
                     
@@ -354,11 +355,13 @@
     </div>
 
     <script>
+        
         let hamburger = document.querySelector(".hamburger");
-        hamburger.addEventListener("click", function() {
+          hamburger.addEventListener("click", function() {
           hamburger.classList.toggle("is-active");
           document.querySelector('.hidden').classList.toggle("is-active");
         });
+        
 
         let options = document.querySelector("#user");
         options.addEventListener("click", function() {
@@ -371,19 +374,32 @@
                 document.querySelector('body').classList.add("overflow");
                 // 
                 
-            })
+            });
 
         let exit = document.querySelector('#close');
             exit.addEventListener("click", function(){
                 document.querySelector('#logout').classList.remove("overlay");
                 document.querySelector('body').classList.remove("overflow");
-            })
+            });
 
             let searchMobile = document.querySelector('#search-btn-mobile');
             searchMobile.addEventListener("click", function(){
                 document.querySelector('form').classList.toggle("block");
+                document.querySelector('overlay').classList.remove("block");
                 document.querySelector('body').classList.remove("overflow");
-            })
+            });
+
+
+//             function scroolSmooth(){
+//                 const go = (elem) => {
+//                     window.scroll({       // 1
+//                     top: document.querySelector( elem )
+//                     .offsetTop,       // 2
+//                      left: 0,
+//                     behavior: 'smooth'// 3
+//    });
+// }
+//             }
       
       </script>
 </div>
