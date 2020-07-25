@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sbsTube</title>
+    <meta name="description" content="iTube | Só mais uma maneira de ver vídeos online">
+    <meta property="og:image" content="" />
+    <title>iTube | Assista vídeos online</title>
     <link rel="stylesheet" href="hamburguer.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,48 +13,58 @@
     <div>
     <header>
         <div class="container">
+            <nav>
+                <button class="hamburger hamburger--vortex" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                  <ul id="menu" class="hidden">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="javascripit:void(0)" onclick="scroolSmooth('#trending')">Em Alta</a></li>
+                    <li><a href="#recomended">Recomendados</a></li>
+                    <li><a href="#entertainment">Entretenimento </a></li>
+                    <li><a href="#sports">Esportes</a></li>
+                  </ul>
+                
+            </nav>
             <div id="brand-menu">
-                <nav>
-                    <button class="hamburger hamburger--vortex" type="button">
-                        <span class="hamburger-box">
-                          <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-                      <ul id="menu" class="hidden">
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Música </a></li>
-                        <li><a href="#">Entretenimento </a></li>
-                        <li><a href="#">Esportes</a></li>
-                      </ul>
-                    
-                </nav>
                 <input type="button" value="" id="search-btn-mobile">
                 <a href="" id="logo">
-                <h1><img src="img/logo.png" alt=""></h1>
-                </a>
+                    <h1><img src="img/logo.png" alt=""></h1>
+                    </a>
+                
             </div>
             <div id="form">
                 <form action="#">
                     <input type="search" name="search" id="search" placeholder="Buscar....">
-                    <input type="submit" value="" id="search-btn">
+                    <input type="submit" value="" id="search-btn" onclick="javascript:void(0)">
                 </form>
-            </div>  
+            </div> 
+            
+           
+            
+            
             <div id="login">
-                <a href="javascript:void(0)" id="user"> <span ></span> <p id="username">silas.sbs</p></a>
-                    <ul id="options">
-                        <li><a href="#">Meu Canal</a></li>
-                        <li><a href="#">Minhas Configurações</a></li>
-                        <li><a href="#" id="logout-link">Sair</a></li>
-                    </ul>
-                
+                <div>
+                    <a href="javascript:void(0)" onclick="javascript:void(0)" id="user"> 
+                        <span ></span> <p id="username">silas.sbs</p>
+                        <ul id="options">
+                            <li><a href="#">Meu Canal</a></li>
+                            <li><a href="#">Minhas Configurações</a></li>
+                            <li><a href="#" id="logout-link">Sair</a></li>
+                        </ul>
+                    </a>
+                </div>
             </div>
+
         </div>
     </header>
     <section id="first-section">
         <div class="container">
             <h2>Em Alta 🔥</h2>
-            <div class="wrap">
-                <a href="" class="video-title"><div class="box"></div>
+            <div class="wrap" id="trending">
+                <a href="video-details.html" class="video-title"><div class="box"></div>
                     
                     <div class="text">
                         <h3>Título do Vídeo</h3>
@@ -105,12 +117,60 @@
 
                     </div>
                 </a>
+                 <a href="" class="video-title"><div class="box"></div>
+                    
+                    <div class="text">
+                        <h3>Título do Vídeo</h3>
+                        <p>Olá, Beninas. O vídeo de hoje é como fazer site parecendo o YouTube</p>
+
+                    </div>
+                </a>
+                <a href="" class="video-title"><div class="box"></div>
+                    
+                    <div class="text">
+                        <h3>Título do Vídeo</h3>
+                        <p>Olá, Beninas. O vídeo de hoje é como fazer site parecendo o YouTube</p>
+
+                    </div>
+                </a>
+                <a href="" class="video-title"><div class="box"></div>
+                    
+                    <div class="text">
+                        <h3>Título do Vídeo</h3>
+                        <p>Olá, Beninas. O vídeo de hoje é como fazer site parecendo o YouTube</p>
+
+                    </div>
+                </a>
                 
                 
             </div>
 
-            <h2>Recomendados 👀</h2>
-            <div class="wrap">
+            <h2 id="recommended">Recomendados 👀</h2>
+            <div class="wrap" >
+                <a href="" class="video-title"><div class="box"></div>
+                    
+                    <div class="text">
+                        <h3>Título do Vídeo</h3>
+                        <p>Olá, Beninas. O vídeo de hoje é como fazer site parecendo o YouTube</p>
+
+                    </div>
+                </a>
+                <a href="" class="video-title"><div class="box"></div>
+                    
+                    <div class="text">
+                        <h3>Título do Vídeo</h3>
+                        <p>Olá, Beninas. O vídeo de hoje é como fazer site parecendo o YouTube</p>
+
+                    </div>
+                </a>
+                <a href="" class="video-title"><div class="box"></div>
+                    
+                    <div class="text">
+                        <h3>Título do Vídeo</h3>
+                        <p>Olá, Beninas. O vídeo de hoje é como fazer site parecendo o YouTube</p>
+
+                    </div>
+                </a>
                 <a href="" class="video-title"><div class="box"></div>
                     
                     <div class="text">
@@ -161,8 +221,32 @@
                 </a>
             </div>
 
-            <h2>Entretenimento 🎭</h2>
-            <div class="wrap">
+            <h2 id="entertainment">Entretenimento 🎭</h2>
+            <div class="wrap" >
+                <a href="" class="video-title"><div class="box"></div>
+                    
+                    <div class="text">
+                        <h3>Título do Vídeo</h3>
+                        <p>Olá, Beninas. O vídeo de hoje é como fazer site parecendo o YouTube</p>
+
+                    </div>
+                </a>
+                <a href="" class="video-title"><div class="box"></div>
+                    
+                    <div class="text">
+                        <h3>Título do Vídeo</h3>
+                        <p>Olá, Beninas. O vídeo de hoje é como fazer site parecendo o YouTube</p>
+
+                    </div>
+                </a>
+                <a href="" class="video-title"><div class="box"></div>
+                    
+                    <div class="text">
+                        <h3>Título do Vídeo</h3>
+                        <p>Olá, Beninas. O vídeo de hoje é como fazer site parecendo o YouTube</p>
+
+                    </div>
+                </a>
                 <a href="" class="video-title"><div class="box"></div>
                     
                     <div class="text">
@@ -212,8 +296,9 @@
                     </div>
                 </a>
             </div>
-            <h2>Esportes ⚽</h2>
-            <div class="wrap">
+            <h2 id="sports">Esportes ⚽</h2>
+            <div class="wrap" >
+               
                 <a href="" class="video-title"><div class="box"></div>
                     
                     <div class="text">
@@ -286,6 +371,7 @@
 
                     </div>
                 </a>
+               
             </div>
         </div>
     </section>
@@ -304,11 +390,13 @@
     </div>
 
     <script>
+        
         let hamburger = document.querySelector(".hamburger");
-        hamburger.addEventListener("click", function() {
+          hamburger.addEventListener("click", function() {
           hamburger.classList.toggle("is-active");
           document.querySelector('.hidden').classList.toggle("is-active");
         });
+        
 
         let options = document.querySelector("#user");
         options.addEventListener("click", function() {
@@ -321,19 +409,32 @@
                 document.querySelector('body').classList.add("overflow");
                 // 
                 
-            })
+            });
 
         let exit = document.querySelector('#close');
             exit.addEventListener("click", function(){
                 document.querySelector('#logout').classList.remove("overlay");
                 document.querySelector('body').classList.remove("overflow");
-            })
+            });
 
             let searchMobile = document.querySelector('#search-btn-mobile');
             searchMobile.addEventListener("click", function(){
                 document.querySelector('form').classList.toggle("block");
+                document.querySelector('overlay').classList.remove("block");
                 document.querySelector('body').classList.remove("overflow");
-            })
+            });
+
+
+//             function scroolSmooth(){
+//                 const go = (elem) => {
+//                     window.scroll({       // 1
+//                     top: document.querySelector( elem )
+//                     .offsetTop,       // 2
+//                      left: 0,
+//                     behavior: 'smooth'// 3
+//    });
+// }
+//             }
       
       </script>
 </div>
